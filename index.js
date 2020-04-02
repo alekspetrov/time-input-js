@@ -1,65 +1,62 @@
-const toHHMMSS = function (time, divider) {
+export default function (time, divider) {
+  let dt = "00:00:00"
+  if (!time) return dt
+
+  if (typeof time !== "string" && typeof time !== "number") {
+    console.log("Time is not a string or number")
+    return dt
+  }
+
+  let t, l
   let h = "00"
   let m = "00"
   let s = "00"
   let sep = divider || ":"
 
-  let t = time.toString().replace(/[^0-9]/gm, "")
-  let l = t.length
+  t = time.toString().replace(/[^0-9]/gm, "")
+  l = t.length
 
-  // No time or no digits in string
-  if (!t || !parseInt(t)) {
-    return "00:00:00"
-  }
+  if (!parseInt(t)) return dt
 
-  function formatHours() {
-    let pt = t.substr(0, 2)
+  function handler(type, value) {
+    let r
+    let l = type === "h" ? 24 : 59
 
-    h = pt.length === 1
-      ? "0" + pt
-      : parseInt(pt) > 24
+    r = value.length === 1
+      ? "0" + value
+      : parseInt(value) > l
         ? h
-        : pt
+        : value
+
+    return r
   }
 
-  function formatMinutes() {
-    let pm = t.substr(2, 2)
-
-    console.log(pm)
-
-    m = pm.length === 1
-      ? "0" + pm
-      : parseInt(pm) > 59
-        ? m
-        : pm
+  function fh() {
+    return handler("h", t.substr(0, 2))
   }
 
-  function formatSeconds() {
-    let ps = t.substr(4, 2)
+  function fm() {
+    return handler("m", t.substr(2, 2))
+  }
 
-    s = ps.length === 1
-      ? "0" + ps
-      : parseInt(ps) > 59
-        ? s
-        : ps
+  function fs() {
+    return handler("s", t.substr(4, 2))
   }
 
   if (l <= 2) {
-    formatHours()
+    h = fh()
   }
 
   if (l === 3 || l === 4) {
-    formatHours()
-    formatMinutes()
+    h = fh()
+    m = fm()
   }
 
   if (l === 5 || l >= 6) {
-    formatHours()
-    formatMinutes()
-    formatSeconds()
+    h = fh()
+    m = fm()
+    s = fs()
   }
 
   return h + sep + m + sep + s
 }
-
-export default toHHMMSS
