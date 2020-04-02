@@ -3,12 +3,12 @@ Super slim size only 984 bytes (4 KB) 😎
 
 Read more in my blog [alekspetrov.com](https://alekspetrov.com)    
 
-# Installation
+## Installation
 `npm install time-input -S`  
 or  
 `yarn add time-input`  
 
-# Usage
+## Usage
 
 ```javascript
 import toHHMMSS from 'time-input'
@@ -29,7 +29,7 @@ If a time string is not correct script returns default 00:00:00.
 "[12]" -> "00:00:00" and warn in console that format incorect
 ```
 
-# How to remove seconds?
+## How to remove seconds?
 ---
 Since it's just a string and always returns hh:mm:ss format you can slice last 3 symbols.
 
@@ -39,7 +39,7 @@ import toHHMMSS from 'time-input'
 toHHMMSS("12").slice(0, -3) // Returns 12:00
 ```
 
-# Params
+## Params
 Second argument is a divider for time by default it is ':'
 
 ```javascript
@@ -48,7 +48,7 @@ import toHHMMSS from 'time-input'
 toHHMMSS("12", '/') // Returns 12/00/00
 ```
 
-### TODO
+## TODO
 [x] JS script  
 [x] Make seconds optional  
 [ ] Vue component  
