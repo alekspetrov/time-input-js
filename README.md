@@ -39,7 +39,7 @@ import toHHMMSS from 'time-input'
 toHHMMSS("12").slice(0, -3) // Returns 12:00
 ```
 
-### Params
+# Params
 Second argument is a divider for time by default it is ':'
 
 ```javascript
