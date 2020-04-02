@@ -1,0 +1,27 @@
+{
+  "name": "time-input-js",
+  "version": "1.0.0",
+  "description": "Converts any string/number to time string in HH:MM:SS format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekspetrov/time-input.git"
+  },
+  "keywords": [
+    "time",
+    "input",
+    "converter",
+    "formatter",
+    "js",
+    "javaScript"
+  ],
+  "author": "Akeksei Petrov (https://alekspetrov.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alekspetrov/time-input-js/issues"
+  },
+  "homepage": "https://github.com/alekspetrov/time-input-js#readme"
+}
