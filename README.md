@@ -4,14 +4,14 @@ Super slim size only 984 bytes (4 KB) 😎
 Read more in my blog [alekspetrov.com](https://alekspetrov.com)    
 
 ## Installation
-`npm install time-input -S`  
+`npm install time-input-js -S`  
 or  
-`yarn add time-input`  
+`yarn add time-input-js`  
 
 ## Usage
 
 ```javascript
-import toHHMMSS from 'time-input'
+import toHHMMSS from 'time-input-js'
 
 toHHMMSS("12") // Returns 12:00:00
 ```
@@ -34,7 +34,7 @@ If a time string is not correct script returns default 00:00:00.
 Since it's just a string and always returns hh:mm:ss format you can slice last 3 symbols.
 
 ```javascript
-import toHHMMSS from 'time-input'
+import toHHMMSS from 'time-input-js'
 
 toHHMMSS("12").slice(0, -3) // Returns 12:00
 ```
@@ -43,7 +43,7 @@ toHHMMSS("12").slice(0, -3) // Returns 12:00
 Second argument is a divider for time by default it is ':'
 
 ```javascript
-import toHHMMSS from 'time-input'
+import toHHMMSS from 'time-input-js'
 
 toHHMMSS("12", '/') // Returns 12/00/00
 ```
