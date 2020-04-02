@@ -3,7 +3,7 @@ export default function (time, divider) {
   if (!time) return dt
 
   if (typeof time !== "string" && typeof time !== "number") {
-    console.log("Time is not a string or number")
+    console.warn("Time in time-input is not a string or a number!")
     return dt
   }
 
