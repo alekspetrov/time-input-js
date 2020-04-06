@@ -23,8 +23,8 @@ If a time string is not correct script returns default 00:00:00.
 ``` 
 "12abc" -> "12:00:00"   
 "25" -> "00:00:00"  
-"24:59" -> "24:59:00"  
-"24:60" -> "24:00:00"  
+"23:59" -> "23:59:00"  
+"23:60" -> "23:00:00"  
 "00:00:01" -> "00:00:01"
 "[12]" -> "00:00:00" and warn in console that format incorect
 ```
