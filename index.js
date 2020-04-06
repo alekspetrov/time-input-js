@@ -20,7 +20,7 @@ export default function (time, divider) {
 
   function handler(type, value) {
     let r
-    let l = type === "h" ? 24 : 59
+    let l = type === "h" ? 23 : 59
 
     r = value.length === 1
       ? "0" + value
