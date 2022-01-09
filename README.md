@@ -1,7 +1,6 @@
 Converts any string/number to time string in HH:MM:SS format.  
 Super slim size only 984 bytes (4 KB) 😎
 
-Read more in my blog [alekspetrov.com](https://alekspetrov.com)
 
 ## Installation
 
